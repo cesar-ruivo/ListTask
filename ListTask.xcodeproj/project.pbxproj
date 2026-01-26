@@ -6,8 +6,79 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		141E761E2F157AE900EE2DD8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E761C2F157AE900EE2DD8 /* HomeViewController.swift */; };
+		141E76342F157C0500EE2DD8 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E762F2F157C0500EE2DD8 /* Poppins-Regular.ttf */; };
+		141E76352F157C0500EE2DD8 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E76272F157C0500EE2DD8 /* Poppins-ExtraBoldItalic.ttf */; };
+		141E76362F157C0500EE2DD8 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E762E2F157C0500EE2DD8 /* Poppins-MediumItalic.ttf */; };
+		141E76372F157C0500EE2DD8 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E76232F157C0500EE2DD8 /* Poppins-BlackItalic.ttf */; };
+		141E76382F157C0500EE2DD8 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E76252F157C0500EE2DD8 /* Poppins-BoldItalic.ttf */; };
+		141E76392F157C0500EE2DD8 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E76222F157C0500EE2DD8 /* Poppins-Black.ttf */; };
+		141E763A2F157C0500EE2DD8 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E76292F157C0500EE2DD8 /* Poppins-ExtraLightItalic.ttf */; };
+		141E763B2F157C0500EE2DD8 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E76262F157C0500EE2DD8 /* Poppins-ExtraBold.ttf */; };
+		141E763C2F157C0500EE2DD8 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E76282F157C0500EE2DD8 /* Poppins-ExtraLight.ttf */; };
+		141E763D2F157C0500EE2DD8 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E762A2F157C0500EE2DD8 /* Poppins-Italic.ttf */; };
+		141E763E2F157C0500EE2DD8 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E762D2F157C0500EE2DD8 /* Poppins-Medium.ttf */; };
+		141E763F2F157C0500EE2DD8 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E76312F157C0500EE2DD8 /* Poppins-SemiBoldItalic.ttf */; };
+		141E76402F157C0500EE2DD8 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E76242F157C0500EE2DD8 /* Poppins-Bold.ttf */; };
+		141E76412F157C0500EE2DD8 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E76322F157C0500EE2DD8 /* Poppins-Thin.ttf */; };
+		141E76422F157C0500EE2DD8 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E76332F157C0500EE2DD8 /* Poppins-ThinItalic.ttf */; };
+		141E76432F157C0500EE2DD8 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E762C2F157C0500EE2DD8 /* Poppins-LightItalic.ttf */; };
+		141E76442F157C0500EE2DD8 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E76302F157C0500EE2DD8 /* Poppins-SemiBold.ttf */; };
+		141E76452F157C0500EE2DD8 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141E762B2F157C0500EE2DD8 /* Poppins-Light.ttf */; };
+		141E76482F157C3800EE2DD8 /* theme.json in Resources */ = {isa = PBXBuildFile; fileRef = 141E76472F157C2B00EE2DD8 /* theme.json */; };
+		141E764A2F1585A200EE2DD8 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76492F1585A000EE2DD8 /* Style.swift */; };
+		141E764C2F1586C900EE2DD8 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E764B2F1586C200EE2DD8 /* ThemeManager.swift */; };
+		141E764F2F15878200EE2DD8 /* UIColorExtesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E764E2F15877500EE2DD8 /* UIColorExtesion.swift */; };
+		141E76552F15992300EE2DD8 /* RemoteThemeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76542F15991C00EE2DD8 /* RemoteThemeEndpoint.swift */; };
+		141E76582F15994E00EE2DD8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76572F15994B00EE2DD8 /* Endpoint.swift */; };
+		141E765A2F15999100EE2DD8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76592F15998700EE2DD8 /* NetworkService.swift */; };
+		141E765C2F1599BC00EE2DD8 /* ThemeHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E765B2F1599B700EE2DD8 /* ThemeHost.swift */; };
+		141E76642F1EA6CE00EE2DD8 /* CalendarDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76632F1EA6C800EE2DD8 /* CalendarDay.swift */; };
+		141E766C2F1EA75B00EE2DD8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E766B2F1EA75400EE2DD8 /* HomeViewModel.swift */; };
+		141E766E2F1EA76F00EE2DD8 /* HomeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E766D2F1EA76400EE2DD8 /* HomeViewModelProtocol.swift */; };
+		141E76702F1EA77A00EE2DD8 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E766F2F1EA77500EE2DD8 /* HomeBuilder.swift */; };
+		141E76732F1ECF5900EE2DD8 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76722F1ECF5400EE2DD8 /* CodeView.swift */; };
+		141E76772F20174000EE2DD8 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76762F20173900EE2DD8 /* CalendarService.swift */; };
+		141E76792F20176400EE2DD8 /* CalendarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76782F20175F00EE2DD8 /* CalendarProtocol.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		141E75FF2F10426300EE2DD8 /* ListTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		141E761C2F157AE900EE2DD8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		141E76222F157C0500EE2DD8 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		141E76232F157C0500EE2DD8 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		141E76242F157C0500EE2DD8 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		141E76252F157C0500EE2DD8 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		141E76262F157C0500EE2DD8 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		141E76272F157C0500EE2DD8 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		141E76282F157C0500EE2DD8 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		141E76292F157C0500EE2DD8 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		141E762A2F157C0500EE2DD8 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		141E762B2F157C0500EE2DD8 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		141E762C2F157C0500EE2DD8 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		141E762D2F157C0500EE2DD8 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		141E762E2F157C0500EE2DD8 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		141E762F2F157C0500EE2DD8 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		141E76302F157C0500EE2DD8 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		141E76312F157C0500EE2DD8 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		141E76322F157C0500EE2DD8 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		141E76332F157C0500EE2DD8 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		141E76472F157C2B00EE2DD8 /* theme.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = theme.json; sourceTree = "<group>"; };
+		141E76492F1585A000EE2DD8 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		141E764B2F1586C200EE2DD8 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		141E764E2F15877500EE2DD8 /* UIColorExtesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtesion.swift; sourceTree = "<group>"; };
+		141E76542F15991C00EE2DD8 /* RemoteThemeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteThemeEndpoint.swift; sourceTree = "<group>"; };
+		141E76572F15994B00EE2DD8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		141E76592F15998700EE2DD8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		141E765B2F1599B700EE2DD8 /* ThemeHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHost.swift; sourceTree = "<group>"; };
+		141E76632F1EA6C800EE2DD8 /* CalendarDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDay.swift; sourceTree = "<group>"; };
+		141E766B2F1EA75400EE2DD8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		141E766D2F1EA76400EE2DD8 /* HomeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocol.swift; sourceTree = "<group>"; };
+		141E766F2F1EA77500EE2DD8 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		141E76722F1ECF5400EE2DD8 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		141E76762F20173900EE2DD8 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
+		141E76782F20175F00EE2DD8 /* CalendarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -46,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				141E76012F10426300EE2DD8 /* ListTask */,
+				141E761B2F157AD300EE2DD8 /* APP */,
 				141E76002F10426300EE2DD8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +128,159 @@
 				141E75FF2F10426300EE2DD8 /* ListTask.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		141E761B2F157AD300EE2DD8 /* APP */ = {
+			isa = PBXGroup;
+			children = (
+				141E761F2F157B1A00EE2DD8 /* Core */,
+				141E76602F1EA66B00EE2DD8 /* Features */,
+			);
+			path = APP;
+			sourceTree = "<group>";
+		};
+		141E761F2F157B1A00EE2DD8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				141E76722F1ECF5400EE2DD8 /* CodeView.swift */,
+				141E764D2F15876200EE2DD8 /* Extension */,
+				141E76562F15994000EE2DD8 /* Service */,
+				141E76202F157B2900EE2DD8 /* Theme */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		141E76202F157B2900EE2DD8 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				141E76212F157BF200EE2DD8 /* Font */,
+				141E76472F157C2B00EE2DD8 /* theme.json */,
+				141E76492F1585A000EE2DD8 /* Style.swift */,
+				141E764B2F1586C200EE2DD8 /* ThemeManager.swift */,
+				141E765B2F1599B700EE2DD8 /* ThemeHost.swift */,
+				141E76542F15991C00EE2DD8 /* RemoteThemeEndpoint.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		141E76212F157BF200EE2DD8 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				141E76222F157C0500EE2DD8 /* Poppins-Black.ttf */,
+				141E76232F157C0500EE2DD8 /* Poppins-BlackItalic.ttf */,
+				141E76242F157C0500EE2DD8 /* Poppins-Bold.ttf */,
+				141E76252F157C0500EE2DD8 /* Poppins-BoldItalic.ttf */,
+				141E76262F157C0500EE2DD8 /* Poppins-ExtraBold.ttf */,
+				141E76272F157C0500EE2DD8 /* Poppins-ExtraBoldItalic.ttf */,
+				141E76282F157C0500EE2DD8 /* Poppins-ExtraLight.ttf */,
+				141E76292F157C0500EE2DD8 /* Poppins-ExtraLightItalic.ttf */,
+				141E762A2F157C0500EE2DD8 /* Poppins-Italic.ttf */,
+				141E762B2F157C0500EE2DD8 /* Poppins-Light.ttf */,
+				141E762C2F157C0500EE2DD8 /* Poppins-LightItalic.ttf */,
+				141E762D2F157C0500EE2DD8 /* Poppins-Medium.ttf */,
+				141E762E2F157C0500EE2DD8 /* Poppins-MediumItalic.ttf */,
+				141E762F2F157C0500EE2DD8 /* Poppins-Regular.ttf */,
+				141E76302F157C0500EE2DD8 /* Poppins-SemiBold.ttf */,
+				141E76312F157C0500EE2DD8 /* Poppins-SemiBoldItalic.ttf */,
+				141E76322F157C0500EE2DD8 /* Poppins-Thin.ttf */,
+				141E76332F157C0500EE2DD8 /* Poppins-ThinItalic.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		141E764D2F15876200EE2DD8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				141E764E2F15877500EE2DD8 /* UIColorExtesion.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		141E76562F15994000EE2DD8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				141E76752F20167200EE2DD8 /* Network */,
+				141E76742F20164B00EE2DD8 /* DataService */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		141E76602F1EA66B00EE2DD8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				141E76622F1EA6AB00EE2DD8 /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		141E76612F1EA68800EE2DD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				141E76632F1EA6C800EE2DD8 /* CalendarDay.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		141E76622F1EA6AB00EE2DD8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				141E76612F1EA68800EE2DD8 /* Model */,
+				141E76652F1EA6D300EE2DD8 /* ViewModel */,
+				141E76662F1EA6F300EE2DD8 /* View */,
+				141E76672F1EA6FA00EE2DD8 /* Builder */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		141E76652F1EA6D300EE2DD8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				141E766D2F1EA76400EE2DD8 /* HomeViewModelProtocol.swift */,
+				141E766B2F1EA75400EE2DD8 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		141E76662F1EA6F300EE2DD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				141E766A2F1EA74400EE2DD8 /* Components */,
+				141E761C2F157AE900EE2DD8 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		141E76672F1EA6FA00EE2DD8 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				141E766F2F1EA77500EE2DD8 /* HomeBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		141E766A2F1EA74400EE2DD8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		141E76742F20164B00EE2DD8 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				141E76782F20175F00EE2DD8 /* CalendarProtocol.swift */,
+				141E76762F20173900EE2DD8 /* CalendarService.swift */,
+			);
+			path = DataService;
+			sourceTree = "<group>";
+		};
+		141E76752F20167200EE2DD8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				141E76572F15994B00EE2DD8 /* Endpoint.swift */,
+				141E76592F15998700EE2DD8 /* NetworkService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +347,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				141E76482F157C3800EE2DD8 /* theme.json in Resources */,
+				141E76342F157C0500EE2DD8 /* Poppins-Regular.ttf in Resources */,
+				141E76352F157C0500EE2DD8 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				141E76362F157C0500EE2DD8 /* Poppins-MediumItalic.ttf in Resources */,
+				141E76372F157C0500EE2DD8 /* Poppins-BlackItalic.ttf in Resources */,
+				141E76382F157C0500EE2DD8 /* Poppins-BoldItalic.ttf in Resources */,
+				141E76392F157C0500EE2DD8 /* Poppins-Black.ttf in Resources */,
+				141E763A2F157C0500EE2DD8 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				141E763B2F157C0500EE2DD8 /* Poppins-ExtraBold.ttf in Resources */,
+				141E763C2F157C0500EE2DD8 /* Poppins-ExtraLight.ttf in Resources */,
+				141E763D2F157C0500EE2DD8 /* Poppins-Italic.ttf in Resources */,
+				141E763E2F157C0500EE2DD8 /* Poppins-Medium.ttf in Resources */,
+				141E763F2F157C0500EE2DD8 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				141E76402F157C0500EE2DD8 /* Poppins-Bold.ttf in Resources */,
+				141E76412F157C0500EE2DD8 /* Poppins-Thin.ttf in Resources */,
+				141E76422F157C0500EE2DD8 /* Poppins-ThinItalic.ttf in Resources */,
+				141E76432F157C0500EE2DD8 /* Poppins-LightItalic.ttf in Resources */,
+				141E76442F157C0500EE2DD8 /* Poppins-SemiBold.ttf in Resources */,
+				141E76452F157C0500EE2DD8 /* Poppins-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +376,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				141E76582F15994E00EE2DD8 /* Endpoint.swift in Sources */,
+				141E76732F1ECF5900EE2DD8 /* CodeView.swift in Sources */,
+				141E765C2F1599BC00EE2DD8 /* ThemeHost.swift in Sources */,
+				141E76642F1EA6CE00EE2DD8 /* CalendarDay.swift in Sources */,
+				141E764F2F15878200EE2DD8 /* UIColorExtesion.swift in Sources */,
+				141E766E2F1EA76F00EE2DD8 /* HomeViewModelProtocol.swift in Sources */,
+				141E765A2F15999100EE2DD8 /* NetworkService.swift in Sources */,
+				141E766C2F1EA75B00EE2DD8 /* HomeViewModel.swift in Sources */,
+				141E76552F15992300EE2DD8 /* RemoteThemeEndpoint.swift in Sources */,
+				141E76792F20176400EE2DD8 /* CalendarProtocol.swift in Sources */,
+				141E76772F20174000EE2DD8 /* CalendarService.swift in Sources */,
+				141E76702F1EA77A00EE2DD8 /* HomeBuilder.swift in Sources */,
+				141E764C2F1586C900EE2DD8 /* ThemeManager.swift in Sources */,
+				141E764A2F1585A200EE2DD8 /* Style.swift in Sources */,
+				141E761E2F157AE900EE2DD8 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +408,6 @@
 				INFOPLIST_FILE = ListTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -180,7 +438,6 @@
 				INFOPLIST_FILE = ListTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
