@@ -1,7 +1,7 @@
 import Foundation
 
 protocol HomeViewModelProtocol {
-    var calendarDays: [calendarDay] { get }
+    var calendarDays: [CalendarDay] { get }
     var onUpdateCalendar: (() -> Void)? { get set }
     var onError: ((String) -> Void)? { get set } 
     

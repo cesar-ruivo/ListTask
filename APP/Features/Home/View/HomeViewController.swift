@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     private func setupBindings() {
         // 1. O que fazer quando chegar dados novos?
-        viewModel.onUpdate = { [weak self] in
+        viewModel.onUpdateCalendar = { [weak self] in
             DispatchQueue.main.async {
             }
         }
