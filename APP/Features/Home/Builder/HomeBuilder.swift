@@ -1,14 +1,13 @@
 import Foundation
 import UIKit
 
-final class HomeBuilder {
+final class HomeBuilder:HomeBuilderProtocol {
     
-    static func build() -> UIViewController {
-        let networkService = NetworkService()
-        let calendarService = CalendarService()
+    func build() -> UIViewController {
+        let calendarService: CalendarService = CalendarService()
         
-        let viewModel = HomeViewModel(networkService: networkService, calendarService: calendarService)
-        let view = HomeViewController(viewModel: viewModel)
+        let viewModel: HomeViewModel = HomeViewModel(calendarService: calendarService)
+        let view: HomeViewController = HomeViewController(viewModel: viewModel)
         
         return view
     }

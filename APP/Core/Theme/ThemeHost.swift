@@ -1,6 +1,6 @@
 import Foundation
 
-class ThemeHost {
+final class ThemeHost {
     private let networkService: NetworkService
     
     init(networkService: NetworkService = .init()) {
@@ -9,13 +9,7 @@ class ThemeHost {
     
     //MARK: - funcoes
     func fetchRemoteTheme(completion: @escaping (AppTheme?) -> Void) {
-        guard let url = URL(string: "https://gist.githubusercontent.com/cesar-ruivo/53fc060661d2cc3d6174f27e4d649e5a/raw(apagar)/c48b31e1b089b4a37c5079f0d22273d021c76eeb/theme.json") else {
-            print("URL do tema remoto é inválida. Carregando tema local.")
-            loadLocalTheme(completion: completion)
-            return
-        }
-        
-        let endpoint = GenericEndPoint(baseURL: url)
+        let endpoint: ThemeEndpoint = ThemeEndpoint()
         
         networkService.request(endPoint: endpoint) { (result: Result<AppTheme, Error>) in
             switch result {
@@ -31,14 +25,14 @@ class ThemeHost {
     }
     
     func loadLocalTheme(completion: @escaping (AppTheme?) -> Void) {
-        guard let bundle = Bundle.main.url(forResource: "theme", withExtension: "json") else {
+        guard let bundle: URL = Bundle.main.url(forResource: "theme", withExtension: "json") else {
                     print("ERRO: theme.json não encontrado.")
                     completion(nil)
                     return }
         
         do {
-            let themeData = try Data(contentsOf: bundle)
-            let theme = try JSONDecoder().decode(AppTheme.self, from:  themeData)
+            let themeData: Data = try Data(contentsOf: bundle)
+            let theme: AppTheme = try JSONDecoder().decode(AppTheme.self, from:  themeData)
             
             completion(theme)
             print("Tema carregado com sucesso!")

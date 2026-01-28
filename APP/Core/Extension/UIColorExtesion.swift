@@ -2,8 +2,9 @@ import UIKit
 
 extension UIColor {
     convenience init(hex: String) {
-        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
-        hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
+        var hexSanitized: String = hex
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .replacingOccurrences(of: "#", with: "")
 
         var rgb: UInt64 = 0
         var r: CGFloat = 0.0
@@ -11,7 +12,7 @@ extension UIColor {
         var b: CGFloat = 0.0
         var a: CGFloat = 1.0
 
-        let length = hexSanitized.count
+        let length: Int = hexSanitized.count
 
         guard Scanner(string: hexSanitized).scanHexInt64(&rgb) else {
             self.init(red: 0, green: 0, blue: 0, alpha: 1)

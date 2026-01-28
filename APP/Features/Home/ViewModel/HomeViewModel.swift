@@ -1,7 +1,6 @@
 import Foundation
 
-class HomeViewModel: HomeViewModelProtocol {
-    private let networkService: NetworkServiceProtocol
+final class HomeViewModel: HomeViewModelProtocol {
     private let calendarService: CalendarServiceProtocol
     
     private var allTasks: [Task] = []
@@ -22,8 +21,7 @@ class HomeViewModel: HomeViewModelProtocol {
     var onUpdateCalendar: (() -> Void)?
     var onError: ((String) -> Void)?
     
-    init(networkService: NetworkServiceProtocol, calendarService: CalendarServiceProtocol) {
-        self.networkService = networkService
+    init(calendarService: CalendarServiceProtocol) {
         self.calendarService = calendarService
     }
      
