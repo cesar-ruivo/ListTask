@@ -1,7 +1,6 @@
 import Foundation
 
-class HomeViewModel: HomeViewModelProtocol {
-    private let networkService: NetworkServiceProtocol
+final class HomeViewModel: HomeViewModelProtocol {
     private let calendarService: CalendarServiceProtocol
     
     private(set) var days: [CalendarDay]
@@ -15,8 +14,7 @@ class HomeViewModel: HomeViewModelProtocol {
     var onUpdateCalendar: (() -> Void)?
     var onError: ((String) -> Void)?
     
-    init(networkService: NetworkServiceProtocol, calendarService: CalendarServiceProtocol) {
-        self.networkService = networkService
+    init(calendarService: CalendarServiceProtocol) {
         self.calendarService = calendarService
     }
      
@@ -25,8 +23,8 @@ class HomeViewModel: HomeViewModelProtocol {
     }
     // MARK: - Calendario
     func fetchCalendarDays() {
-        let hoje = Date()
-        let datasCruas = calendarService.getDaysInMoth(for: hoje)
+        let hoje: Date = Date()
+        let datasCruas: [Date] = calendarService.getDaysInMoth(for: hoje)
         self.days = datasCruas.map { date in
         }
     }

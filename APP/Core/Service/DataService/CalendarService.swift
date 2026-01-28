@@ -1,16 +1,16 @@
 import Foundation
 
-class CalendarService: CalendarServiceProtocol {
-    private let calendar = Calendar.current
+final class CalendarService: CalendarServiceProtocol {
+    private let calendar: Calendar = Calendar.current
     
     func getDaysInMoth(for date: Date) -> [Date] {
-        guard let range = calendar.range(of: .day, in: .month, for: date) else {
+        guard let range: Range<Int> = calendar.range(of: .day, in: .month, for: date) else {
             return []
         }
         
-        let components = calendar.dateComponents([.year, .month], from: date)
+        let components: DateComponents = calendar.dateComponents([.year, .month], from: date)
         
-        guard let startOfMonth = calendar.date(from: components) else {
+        guard let startOfMonth: Date = calendar.date(from: components) else {
             return []
         }
         
