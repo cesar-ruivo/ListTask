@@ -15,12 +15,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        self.setupScene(windowScene: windowScene)
+        let themeHost = ThemeHost()
+        themeHost.fetchRemoteTheme() { theme in
+            ThemeManager.shared.setTheme(theme: theme)
+            DispatchQueue.main.async {
+                self.setupScene(windowScene: windowScene)
+            }
+        }
     }
 
     func setupScene(windowScene: UIWindowScene) {
         let window: UIWindow = .init(windowScene: windowScene)
-        let homeViewController = HomeViewController()
+        let homeViewController = HomeBuilder.build()
         let navegationController = UINavigationController(rootViewController: homeViewController)
         window.rootViewController = navegationController
         

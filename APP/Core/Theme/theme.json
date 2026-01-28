@@ -1,0 +1,98 @@
+{
+    "colors": [
+        {
+            "colorName": "textColorPrimary",
+            "hexadecimal": "#080C3A"
+        },
+        {
+            "colorName": "textColorSecondary",
+            "hexadecimal": "#9598B1"
+        },
+        {
+            "colorName": "textColorTertiary",
+            "hexadecimal": "#818393"
+        },
+        {
+            "colorName": "mainColorPrimay",
+            "hexadecimal": "#FF720D"
+        },
+        {
+            "colorName": "mainColorSecondary",
+            "hexadecimal": "#E97548"
+        },
+        {
+            "colorName": "lightBlue",
+            "hexadecimal": "#2F1883"
+        },
+        {
+            "colorName": "lightYellow",
+            "hexadecimal": "#FFFBF1"
+        },
+        {
+            "colorName": "lightGreen",
+            "hexadecimal": "#F6FDF9"
+        },
+        {
+            "colorName": "lightOrange",
+            "hexadecimal": "#FFE9D9"
+        },
+        {
+            "colorName": "yellow",
+            "hexadecimal": "#D29706"
+        },
+        {
+            "colorName": "green",
+            "hexadecimal": "#09BF43"
+        },
+        {
+            "colorName": "orange",
+            "hexadecimal": "#D87026"
+        },
+        {
+            "colorName": "blue",
+            "hexadecimal": "#2F1883"
+        },
+    ],
+    "texts": [
+        {
+            "name": "h1",
+            "fontName": "Poppins-Bold",
+            "size": 24
+        },
+        {
+            "name": "h2",
+            "fontName": "Poppins-Regular",
+            "size": 18
+        },
+        {
+            "name": "h3",
+            "fontName": "Poppins-Regular",
+            "size": 14
+        },
+        {
+            "name": "h3-SemiBold",
+            "fontName": "Poppins-SemiBold",
+            "size": 14
+        },
+        {
+            "name": "h4",
+            "fontName": "Poppins-Regular",
+            "size": 12
+        },
+        {
+            "name": "h4-SemiBold",
+            "fontName": "Poppins-SemiBold",
+            "size": 12
+        },
+        {
+            "name": "h5",
+            "fontName": "Poppins-Regular",
+            "size": 14
+        },
+        {
+            "name": "h5-Light",
+            "fontName": "Poppins-Light",
+            "size": 14
+        }
+    ]
+}
