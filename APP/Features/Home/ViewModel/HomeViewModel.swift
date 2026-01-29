@@ -3,6 +3,7 @@ import Foundation
 final class HomeViewModel: HomeViewModelProtocol {
     private let calendarService: CalendarServiceProtocol
     
+    private var selectedDate: Date = Date()
     private var allTasks: [Task] = []
     private(set) var filteredTasks: [Task] = []
     
@@ -26,39 +27,23 @@ final class HomeViewModel: HomeViewModelProtocol {
     }
      
     func viewDidLoad() {
-        
+        fetchCalendarDays(for: selectedDate)
     }
     // MARK: - Calendario
-    func fetchCalendarDays() {
-        let today = Date()
-        
-        let rawDates = calendarService.getDaysInMoth(for: today)
-        
-        let dayFormatter = DateFormatter()
-        dayFormatter.dateFormat = "dd"
-        
-        let weekDayFormatter = DateFormatter()
-        weekDayFormatter.dateFormat = "EEE"
-        weekDayFormatter.locale = Locale(identifier: "pt_BR")
-        
-        self.calendarDays = rawDates.map { date in
-            let dayNumber = dayFormatter.string(from: date)
-            let weekDay = weekDayFormatter.string(from: date)
-            let isSelected = Calendar.current.isDate(date, inSameDayAs: today)
-            
-            return CalendarDay(date: date, dayNumber: dayNumber, WeekDay: weekDay.uppercased(), isSelected: isSelected)
-        }
+    func fetchCalendarDays(for date: Date) {
+        self.calendarDays = calendarService.getCalendar(for: selectedDate)
+        filterTasks(by: date)
     }
     
     func selectDay(at index: Int) {
         guard index < calendarDays.count else { return }
         
-        for day in 0..<calendarDays.count {
-            calendarDays[day].isSelected = (day == index)
+        calendarDays.indices.forEach { dayIndex in
+            calendarDays[dayIndex].isSelected = (dayIndex == index)
         }
         onUpdateCalendar?()
         
-        let selectedDate = calendarDays[index].date
+        let selectedDate: Date = calendarDays[index].date
         filterTasks(by: selectedDate)
     }
     

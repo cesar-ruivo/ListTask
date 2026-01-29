@@ -21,8 +21,8 @@ final class HomeViewController: UIViewController {
     }
 }
 // MARK: - PrivateFunc
-extension HomeViewController {
-    private func setupBindings() {
+private extension HomeViewController {
+    func setupBindings() {
         viewModel.onUpdateCalendar = { [weak self] in
             DispatchQueue.main.async {
             }
@@ -35,7 +35,7 @@ extension HomeViewController {
         }
     }
     
-    private func showAlert(message: String) {
+    func showAlert(message: String) {
             print("Erro: \(message)")
         }
 }

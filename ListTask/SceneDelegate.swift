@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func setupScene(windowScene: UIWindowScene) {
         let window: UIWindow = .init(windowScene: windowScene)
-        let homeViewController = HomeBuilder.build()
+        let homeViewController = HomeBuilder().build()
         let navegationController = UINavigationController(rootViewController: homeViewController)
         window.rootViewController = navegationController
         
