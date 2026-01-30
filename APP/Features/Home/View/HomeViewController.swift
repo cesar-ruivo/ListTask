@@ -21,15 +21,13 @@ final class HomeViewController: UIViewController {
     }
 }
 // MARK: - PrivateFunc
-extension HomeViewController {
-    private func setupBindings() {
-        // 1. O que fazer quando chegar dados novos?
-        viewModel.onUpdate = { [weak self] in
+private extension HomeViewController {
+    func setupBindings() {
+        viewModel.onUpdateCalendar = { [weak self] in
             DispatchQueue.main.async {
             }
         }
         
-        // 2. O que fazer quando der erro?
         viewModel.onError = { [weak self] message in
             DispatchQueue.main.async {
                 self?.showAlert(message: message)
@@ -37,7 +35,7 @@ extension HomeViewController {
         }
     }
     
-    private func showAlert(message: String) {
+    func showAlert(message: String) {
             print("Erro: \(message)")
         }
 }

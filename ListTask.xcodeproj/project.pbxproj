@@ -41,7 +41,9 @@
 		141E76732F1ECF5900EE2DD8 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76722F1ECF5400EE2DD8 /* CodeView.swift */; };
 		141E76772F20174000EE2DD8 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76762F20173900EE2DD8 /* CalendarService.swift */; };
 		141E76792F20176400EE2DD8 /* CalendarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76782F20175F00EE2DD8 /* CalendarProtocol.swift */; };
+		141E767B2F2804B900EE2DD8 /* HomeViewModelEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E767A2F2804B500EE2DD8 /* HomeViewModelEnum.swift */; };
 		141E76892F2A83C700EE2DD8 /* HomeBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76882F2A83BE00EE2DD8 /* HomeBuilderProtocol.swift */; };
+		141E76D02F2A9AA200EE2DD8 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76CF2F2A9A9F00EE2DD8 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,7 +82,9 @@
 		141E76722F1ECF5400EE2DD8 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		141E76762F20173900EE2DD8 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		141E76782F20175F00EE2DD8 /* CalendarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarProtocol.swift; sourceTree = "<group>"; };
+		141E767A2F2804B500EE2DD8 /* HomeViewModelEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelEnum.swift; sourceTree = "<group>"; };
 		141E76882F2A83BE00EE2DD8 /* HomeBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilderProtocol.swift; sourceTree = "<group>"; };
+		141E76CF2F2A9A9F00EE2DD8 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -219,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				141E76632F1EA6C800EE2DD8 /* CalendarDay.swift */,
+				141E76CF2F2A9A9F00EE2DD8 /* Task.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 		141E76652F1EA6D300EE2DD8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				141E767A2F2804B500EE2DD8 /* HomeViewModelEnum.swift */,
 				141E766D2F1EA76400EE2DD8 /* HomeViewModelProtocol.swift */,
 				141E766B2F1EA75400EE2DD8 /* HomeViewModel.swift */,
 			);
@@ -389,7 +395,9 @@
 				141E766C2F1EA75B00EE2DD8 /* HomeViewModel.swift in Sources */,
 				141E76892F2A83C700EE2DD8 /* HomeBuilderProtocol.swift in Sources */,
 				141E76552F15992300EE2DD8 /* RemoteThemeEndpoint.swift in Sources */,
+				141E76D02F2A9AA200EE2DD8 /* Task.swift in Sources */,
 				141E76792F20176400EE2DD8 /* CalendarProtocol.swift in Sources */,
+				141E767B2F2804B900EE2DD8 /* HomeViewModelEnum.swift in Sources */,
 				141E76772F20174000EE2DD8 /* CalendarService.swift in Sources */,
 				141E76702F1EA77A00EE2DD8 /* HomeBuilder.swift in Sources */,
 				141E764C2F1586C900EE2DD8 /* ThemeManager.swift in Sources */,

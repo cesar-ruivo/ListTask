@@ -6,6 +6,6 @@ protocol HomeViewModelProtocol {
     var onError: ((String) -> Void)? { get set } 
     
     func viewDidLoad()
-    func fetchCalendarDays()
+    func fetchCalendarDays(for date: Date)
     func selectDay(at index: Int)
 }
