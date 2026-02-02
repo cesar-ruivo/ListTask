@@ -1,5 +1,5 @@
 protocol CodeView {
-    func setupContraints()
+    func setupConstraints()
     func setupAddView()
     func setupView()
 }
@@ -7,6 +7,6 @@ protocol CodeView {
 extension CodeView {
     func setupView() {
         setupAddView()
-        setupContraints()
+        setupConstraints()
     }
 }
