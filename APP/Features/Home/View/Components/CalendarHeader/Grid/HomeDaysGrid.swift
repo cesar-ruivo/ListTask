@@ -7,6 +7,8 @@ final class HomeDaysGrid: UICollectionViewCell {
         let view = UILabel()
         view.numberOfLines = 1
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.setContentCompressionResistancePriority(.required,for: .horizontal)
+        view.setContentHuggingPriority(.required, for: .horizontal)
         
         return view
     }()
@@ -15,6 +17,8 @@ final class HomeDaysGrid: UICollectionViewCell {
         let view = UILabel()
         view.numberOfLines =  1
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.setContentCompressionResistancePriority(.required, for: .horizontal)
+        view.setContentHuggingPriority(.required, for: .horizontal)
         
         return view
     }()
@@ -31,8 +35,7 @@ final class HomeDaysGrid: UICollectionViewCell {
     private lazy var stackViewGeneral: UIStackView = {
         let view = UIStackView(arrangedSubviews: [labelCalendarDayOfTheWeek, labelCalendarDay, viewSelectionIndicator])
         view.alignment = .center
-        view.spacing = 8
-        view.distribution = .fill
+        view.spacing = 4
         view.axis = .vertical
         view.translatesAutoresizingMaskIntoConstraints = false
         
@@ -58,8 +61,7 @@ final class HomeDaysGrid: UICollectionViewCell {
 extension HomeDaysGrid: CodeView {
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            stackViewGeneral.topAnchor.constraint(equalTo: contentView.topAnchor),
-            stackViewGeneral.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            stackViewGeneral.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             stackViewGeneral.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             stackViewGeneral.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
@@ -81,6 +83,7 @@ extension HomeDaysGrid {
         
         labelCalendarDay.text = card.dayNumber
         labelCalendarDayOfTheWeek.text = card.weekDay
+        
     }
 }
 //MARK: - metodos privados

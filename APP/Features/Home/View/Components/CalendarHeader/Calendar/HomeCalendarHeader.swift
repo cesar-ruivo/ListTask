@@ -43,7 +43,7 @@ final class HomeCalendarHeader: UIView {
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        layout.itemSize = CGSize(width: 40, height: 80)
         layout.minimumLineSpacing = 24
         
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -87,13 +87,15 @@ final class HomeCalendarHeader: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
 }
 
 extension HomeCalendarHeader: CodeView {
     func setupConstraints() {
         NSLayoutConstraint.activate([
             stackViewGeneral.topAnchor.constraint(equalTo: topAnchor, constant: 60),
-            stackViewGeneral.bottomAnchor.constraint(equalTo: bottomAnchor),
+            stackViewGeneral.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
             stackViewGeneral.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stackViewGeneral.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             
