@@ -53,8 +53,8 @@ extension HomeViewModel {
         }
         onUpdateCalendar?()
                 
-        let selectedDate: Date = calendarDays[index].date
-        filterTasks(by: selectedDate)
+        self.selectedDate = calendarDays[index].date
+        filterTasks(by: self.selectedDate)
     }
     
     func getNextMonth() {

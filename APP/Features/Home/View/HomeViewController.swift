@@ -25,6 +25,7 @@ final class HomeViewController: UIViewController {
         setupBindings()
         setupView()
         viewModel.viewDidLoad()
+        setupViewEvents()
     }
 }
 // MARK: - PrivateFunc
@@ -52,7 +53,7 @@ private extension HomeViewController {
     func showAlert(message: String) {
         print("Erro: \(message)")
     }
-    
+    //MARK: - CalendarHeader
     func updateHeaderUI() {
         calendarHeader.configure(
             year: viewModel.currentYear,
@@ -61,6 +62,28 @@ private extension HomeViewController {
             nextMounth: viewModel.nextMonth,
             days: viewModel.calendarDays
         )
+    }
+    
+    func setupViewEvents() {
+        calendarHeader.onDaySelected = { [weak self] index in
+            self?.viewModel.selectDay(at: index)
+        }
+        
+        calendarHeader.onNextYear = { [weak self] in
+            self?.viewModel.getNextYear()
+        }
+        
+        calendarHeader.onPreviousYear = { [weak self] in
+            self?.viewModel.getPreviousYear()
+        }
+        
+        calendarHeader.onNextMonth = { [weak self] in
+            self?.viewModel.getNextMonth()
+        }
+        
+        calendarHeader.onPreviousMonth = { [weak self] in
+            self?.viewModel.getPreviousMonth()
+        }
     }
 }
 
@@ -79,3 +102,4 @@ extension HomeViewController: CodeView {
         view.addSubview(calendarHeader)
     }
 }
+

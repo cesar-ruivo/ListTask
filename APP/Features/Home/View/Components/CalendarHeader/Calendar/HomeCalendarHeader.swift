@@ -3,7 +3,36 @@ import UIKit
 
 final class HomeCalendarHeader: UIView {
     private var days: [CalendarDay] = []
+    
+    var onDaySelected: ((Int) -> Void)?
+    
+    var onNextYear: (() -> Void)?
+    var onPreviousYear: (() -> Void)?
+    
+    var onNextMonth: (() -> Void)?
+    var onPreviousMonth: (() -> Void)?
+    
     //MARK: - UI
+    private lazy var buttonPrevYear: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        button.tintColor = .black
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(didTapPrevYear), for: .touchUpInside)
+        
+        return button
+    }()
+    
+    private lazy var buttonNextYear: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        button.tintColor = .black
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(didTapNextYear), for: .touchUpInside)
+        
+        return button
+    }()
+    
     private lazy var labelYear: UILabel = {
         let view = UILabel()
         view.numberOfLines = 1
@@ -17,6 +46,7 @@ final class HomeCalendarHeader: UIView {
         let view = UILabel()
         view.numberOfLines = 1
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.textAlignment = .center
         view.text = ""
         
         return view
@@ -24,8 +54,12 @@ final class HomeCalendarHeader: UIView {
     
     private lazy var labelNextMonth: UILabel = {
         let view = UILabel()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapNextMonth))
         view.numberOfLines = 1
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(tapGesture)
+        view.textAlignment = .center
         view.text = ""
         
         return view
@@ -33,13 +67,17 @@ final class HomeCalendarHeader: UIView {
     
     private lazy var labelPreviousMonth: UILabel = {
         let view = UILabel()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapPrevMonth))
         view.numberOfLines = 1
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(tapGesture)
+        view.textAlignment = .center
         view.text = ""
         
         return view
     }()
-    
+    //MARK: - CollectionView
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -52,12 +90,13 @@ final class HomeCalendarHeader: UIView {
         view.showsHorizontalScrollIndicator = false
         view.register(HomeDaysGrid.self, forCellWithReuseIdentifier: "HomeDaysGrid")
         view.dataSource = self
+        view.delegate = self
         
         return view
     }()
     //MARK: - StackView
     private lazy var stackViewGeneral: UIStackView = {
-        let view = UIStackView(arrangedSubviews: [labelYear, stackViewMonth, collectionView])
+        let view = UIStackView(arrangedSubviews: [stackViewYear, stackViewMonth, collectionView])
         view.alignment = .center
         view.spacing = 4
         view.distribution = .fill
@@ -71,13 +110,25 @@ final class HomeCalendarHeader: UIView {
         let view = UIStackView(arrangedSubviews: [labelPreviousMonth, labelMonth, labelNextMonth])
         view.alignment = .center
         view.spacing = 16
-        view.distribution = .fillEqually
+        view.distribution = .fill
         view.axis = .horizontal
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
     }()
     
+    private lazy var stackViewYear: UIStackView = {
+        // Agora o labelYear fica sanduichado entre os botões
+        let view = UIStackView(arrangedSubviews: [buttonPrevYear, labelYear, buttonNextYear])
+        view.alignment = .center
+        view.spacing = 16
+        view.distribution = .fill
+        view.axis = .horizontal
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    //MARK: init
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -98,6 +149,8 @@ extension HomeCalendarHeader: CodeView {
             stackViewGeneral.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
             stackViewGeneral.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stackViewGeneral.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            
+            labelNextMonth.widthAnchor.constraint(equalTo: labelPreviousMonth.widthAnchor),
             
             collectionView.heightAnchor.constraint(equalToConstant: 80),
             collectionView.widthAnchor.constraint(equalTo: stackViewGeneral.widthAnchor)
@@ -155,5 +208,30 @@ private extension HomeCalendarHeader {
         labelPreviousMonth.textColor = ThemeManager.shared.getColor(named: "textColorTertiary")
         
         backgroundColor = ThemeManager.shared.getColor(named: "lightYellow")
+    }
+}
+
+extension HomeCalendarHeader: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        onDaySelected?(indexPath.item)
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+}
+
+extension HomeCalendarHeader {
+    @objc private func didTapPrevYear() {
+        onPreviousYear?()
+    }
+    
+    @objc private func didTapNextYear() {
+        onNextYear?()
+    }
+    
+    @objc private func didTapNextMonth() {
+        onNextMonth?()
+    }
+    
+    @objc private func didTapPrevMonth() {
+        onPreviousMonth?()
     }
 }
