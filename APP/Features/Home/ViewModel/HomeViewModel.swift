@@ -82,16 +82,10 @@ extension HomeViewModel {
 private extension HomeViewModel {
     func filterTasks(by date: Date) {
         self.filteredTasks = allTasks.filter { task in
-            return Calendar.current.isDate(task.date, inSameDayAs: date)
+            return Calendar.current.isDate(task.dateEnd, inSameDayAs: date)
         }
         
         state = filteredTasks.isEmpty ? .empty: .hasTasks
-        
-//        if filteredTasks.isEmpty {
-//            self.state = .empty
-//        } else {
-//            self.state = .hasTasks
-//        }
     }
     
     func updateData(for date: Date) {
