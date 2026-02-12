@@ -2,6 +2,7 @@ import Foundation
 
 final class HomeViewModel: HomeViewModelProtocol {
     private let calendarService: CalendarServiceProtocol
+    private let coreData: CoreDataManager
     
     //tarefas
     private var allTasks: [Task] = []
@@ -33,7 +34,7 @@ final class HomeViewModel: HomeViewModelProtocol {
     var onError: ((String) -> Void)?
     
     //MARK: - Inicializador
-    init(calendarService: CalendarServiceProtocol) {
+    init(calendarService: CalendarServiceProtocol, coreData: CoreDataManager = .init()) {
         self.calendarService = calendarService
     }
      

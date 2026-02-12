@@ -3,10 +3,6 @@ import UIKit
 import CoreData
 
 final class CoreDataManager {
-    static let shared: CoreDataManager = CoreDataManager()
-    
-    private init() {}
-    
     lazy var presistentContainer: NSPersistentContainer = {
         let conteiner = NSPersistentContainer(name: "TaskManagerModel")
         conteiner.loadPersistentStores { (storeDescription, error) in
@@ -19,21 +15,10 @@ final class CoreDataManager {
     var context: NSManagedObjectContext {
         return presistentContainer.viewContext
     }
-    
-    func saveContext() {
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                let nserror = error as NSError
-                fatalError("Erro ao salvar: \(nserror), \(nserror.userInfo)")
-            }
-        }
-    }
 }
 
 //MARK: - CRUD
-extension CoreDataManager {
+extension CoreDataManager: CoreDataProtocol {
     func createTask(title: String, description: String?, startDate: Date, endDate: Date, color: TaskColor) {
         let newTask: TaskEntity = TaskEntity(context: context)
         
@@ -52,7 +37,9 @@ extension CoreDataManager {
         let entityName: String = String(describing: type)
         
         let fetchRequest: NSFetchRequest<T> = NSFetchRequest<T>(entityName: entityName)
-        fetchRequest.sortDescriptors = sortBy
+        if let descriptors: [NSSortDescriptor] = sortBy, !descriptors.isEmpty {
+            fetchRequest.sortDescriptors = sortBy
+        }
         
         do {
             let objects = try context.fetch(fetchRequest)
@@ -63,8 +50,19 @@ extension CoreDataManager {
         }
     }
     
-    func deleteTask(_ task: TaskEntity) {
-        context.delete(task)
+    func deleteTask<T: NSManagedObject>(_ object: T) {
+        context.delete(object)
         saveContext()
+    }
+    
+    func saveContext() {
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Erro ao salvar: \(nserror), \(nserror.userInfo)")
+            }
+        }
     }
 }

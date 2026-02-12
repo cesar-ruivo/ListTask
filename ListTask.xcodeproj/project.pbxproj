@@ -49,6 +49,7 @@
 		145D96312F3BD52B00C4410C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96302F3BD52100C4410C /* CoreDataManager.swift */; };
 		145D96342F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96332F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift */; };
 		145D96352F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96322F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift */; };
+		145D96372F3E682300C4410C /* CoreDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96362F3E681F00C4410C /* CoreDataProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		145D96302F3BD52100C4410C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		145D96322F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		145D96332F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		145D96362F3E681F00C4410C /* CoreDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -334,6 +336,7 @@
 		145D962F2F3BD51100C4410C /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				145D96362F3E681F00C4410C /* CoreDataProtocol.swift */,
 				145D96302F3BD52100C4410C /* CoreDataManager.swift */,
 			);
 			path = CoreData;
@@ -436,6 +439,7 @@
 				141E76732F1ECF5900EE2DD8 /* CodeView.swift in Sources */,
 				141E765C2F1599BC00EE2DD8 /* ThemeHost.swift in Sources */,
 				141E76642F1EA6CE00EE2DD8 /* CalendarDay.swift in Sources */,
+				145D96372F3E682300C4410C /* CoreDataProtocol.swift in Sources */,
 				141E764F2F15878200EE2DD8 /* UIColorExtesion.swift in Sources */,
 				145D96312F3BD52B00C4410C /* CoreDataManager.swift in Sources */,
 				141E766E2F1EA76F00EE2DD8 /* HomeViewModelProtocol.swift in Sources */,
