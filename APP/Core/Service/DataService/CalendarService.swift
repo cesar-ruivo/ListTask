@@ -75,4 +75,8 @@ final class CalendarService: CalendarServiceProtocol {
     func getYear(for date: Date) -> String {
         return yearFormatter.string(from: date)
     }
+    
+    func resetCalendar(by date: Date) -> Date {
+        return calendar.startOfDay(for: date)
+    }
 }

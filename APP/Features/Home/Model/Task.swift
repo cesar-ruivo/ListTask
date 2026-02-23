@@ -1,6 +1,24 @@
 import Foundation
 import UIKit
 
+struct Task {
+    let id: UUID
+    let title: String
+    let description: String?
+    let dateStart: Date
+    let dateEnd: Date
+    let colorName: TaskColor
+    
+    var isPast: Bool {
+        return Date() > dateEnd
+    }
+    
+    var isCurrent: Bool {
+        let now = Date()
+        return now >= dateStart && now <= dateEnd
+    }
+}
+
 enum TaskColor: String {
     case blue, orange, yellow, currentDate
     
@@ -36,20 +54,3 @@ enum TaskColor: String {
     }
 }
 
-struct Task {
-    let id: UUID
-    let title: String
-    let description: String?
-    let dateStart: Date
-    let dateEnd: Date
-    let colorName: TaskColor
-    
-    var isPast: Bool {
-        return Date() > dateEnd
-    }
-    
-    var isCurrent: Bool {
-        let now = Date()
-        return now >= dateStart && now <= dateEnd
-    }
-}

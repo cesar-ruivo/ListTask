@@ -2,7 +2,7 @@ import Foundation
 
 final class HomeViewModel: HomeViewModelProtocol {
     private let calendarService: CalendarServiceProtocol
-    private let coreData: CoreDataManager
+    private let coreData: CoreDataProtocol
     
     //tarefas
     private var allTasks: [Task] = []
@@ -34,8 +34,9 @@ final class HomeViewModel: HomeViewModelProtocol {
     var onError: ((String) -> Void)?
     
     //MARK: - Inicializador
-    init(calendarService: CalendarServiceProtocol, coreData: CoreDataManager = .init()) {
+    init(calendarService: CalendarServiceProtocol, coreData: CoreDataProtocol) {
         self.calendarService = calendarService
+        self.coreData = coreData
     }
      
     func viewDidLoad() {
@@ -81,9 +82,15 @@ extension HomeViewModel {
 
 //MARK: - Metodos privados
 private extension HomeViewModel {
+    //MARK: - Calendar
     func filterTasks(by date: Date) {
+        let selectDay = calendarService.resetCalendar(by: date)
+        
         self.filteredTasks = allTasks.filter { task in
-            return Calendar.current.isDate(task.dateEnd, inSameDayAs: date)
+            let start = calendarService.resetCalendar(by: task.dateStart)
+            let end = calendarService.resetCalendar(by: task.dateEnd)
+            
+            return selectDay >= start && selectDay <= end
         }
         
         state = filteredTasks.isEmpty ? .empty: .hasTasks
@@ -100,7 +107,23 @@ private extension HomeViewModel {
         self.nextMonth = calendarService.getRelativeMonthName(for: date, offset: 1)
         
         onUpdateHeader?()
+        fetchAndConvertTasks()
         filterTasks(by: date)
+    }
+    //MARK: - CoreData
+    func fetchAndConvertTasks() {
+        let sortRules = [NSSortDescriptor(key: "startDate", ascending: true)]
+        let entities = coreData.fetchTasks(TaskEntity.self, sortBy: sortRules)
+        
+        self.allTasks = entities.map { entity in
+    
+            return Task(id: entity.id ?? UUID(),
+                        title: entity.title ?? "Sem Titulo",
+                        description: entity.taskDescription,
+                        dateStart: entity.startDate ?? Date(),
+                        dateEnd: entity.endDate ?? Date(),
+                        colorName: TaskColor(rawValue: entity.colorName ?? "") ?? .blue)
+        }
     }
 }
 
