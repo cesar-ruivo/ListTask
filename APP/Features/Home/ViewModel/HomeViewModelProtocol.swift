@@ -6,6 +6,7 @@ protocol HomeViewModelProtocol {
     var onError: ((String) -> Void)? { get set }
     var onUpdateHeader: (() -> Void)? { get set } 
     var onUpdateState: ((HomeViewState) -> Void)? { get set }
+    var onNavegationTask: (() -> Void)? { get set }
     
     var currentMonth: String { get }
     var currentYear: String { get }
@@ -19,5 +20,6 @@ protocol HomeViewModelProtocol {
     func getPreviousMonth()
     func getNextYear()
     func getPreviousYear()
+    func didTapCreateTask()
     
 }

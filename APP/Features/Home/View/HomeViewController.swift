@@ -23,6 +23,22 @@ final class HomeViewController: UIViewController {
         return view
     }()
     
+    private lazy var floatingAddButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = ThemeManager.shared.getColor(named: "mainColorPrimay")
+        button.tintColor = ThemeManager.shared.getColor(named: "white")
+        
+        let config = UIImage.SymbolConfiguration(pointSize: 24, weight:  .bold)
+        button.setImage(UIImage(systemName: "plus", withConfiguration: config), for: .normal)
+        
+        button.layer.cornerRadius = 30
+        
+        button.addTarget(self, action: #selector(didTapCreateTask), for: .touchUpInside)
+        
+        return button
+    }()
+    
     //MARK: - init
     init(viewModel: HomeViewModelProtocol) {
         self.viewModel = viewModel
@@ -127,7 +143,12 @@ extension HomeViewController: CodeView {
             emptyLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             emptyLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             emptyLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            emptyLabel.topAnchor.constraint(greaterThanOrEqualTo: calendarHeader.bottomAnchor, constant: 24)
+            emptyLabel.topAnchor.constraint(greaterThanOrEqualTo: calendarHeader.bottomAnchor, constant: 24),
+            
+            floatingAddButton.widthAnchor.constraint(equalToConstant: 60),
+            floatingAddButton.heightAnchor.constraint(equalToConstant: 60),
+            floatingAddButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
+            floatingAddButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -24)
 
         ])
     }
@@ -135,6 +156,14 @@ extension HomeViewController: CodeView {
     func setupAddView() {
         view.addSubview(calendarHeader)
         view.addSubview(emptyLabel)
+        view.addSubview(floatingAddButton)
     }
 }
 
+//MARK: - navegacao
+
+private extension HomeViewController {
+    @objc func didTapCreateTask() {
+            viewModel.didTapCreateTask()
+    }
+}

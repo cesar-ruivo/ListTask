@@ -50,6 +50,8 @@
 		145D96342F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96332F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift */; };
 		145D96352F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96322F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift */; };
 		145D96372F3E682300C4410C /* CoreDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96362F3E681F00C4410C /* CoreDataProtocol.swift */; };
+		145D96582F4E2F9400C4410C /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96572F4E2F8A00C4410C /* CoordinatorProtocol.swift */; };
+		145D965B2F4E301700C4410C /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D965A2F4E301200C4410C /* HomeCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +99,8 @@
 		145D96322F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		145D96332F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		145D96362F3E681F00C4410C /* CoreDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProtocol.swift; sourceTree = "<group>"; };
+		145D96572F4E2F8A00C4410C /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		145D965A2F4E301200C4410C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -162,6 +166,7 @@
 		141E761F2F157B1A00EE2DD8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				145D96562F4E2F7F00C4410C /* Coordinator */,
 				141E76722F1ECF5400EE2DD8 /* CodeView.swift */,
 				145D962F2F3BD51100C4410C /* CoreData */,
 				141E764D2F15876200EE2DD8 /* Extension */,
@@ -246,6 +251,7 @@
 		141E76622F1EA6AB00EE2DD8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				145D96592F4E300600C4410C /* Coordinator */,
 				141E76612F1EA68800EE2DD8 /* Model */,
 				141E76652F1EA6D300EE2DD8 /* ViewModel */,
 				141E76662F1EA6F300EE2DD8 /* View */,
@@ -340,6 +346,22 @@
 				145D96302F3BD52100C4410C /* CoreDataManager.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		145D96562F4E2F7F00C4410C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				145D96572F4E2F8A00C4410C /* CoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		145D96592F4E300600C4410C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				145D965A2F4E301200C4410C /* HomeCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,6 +461,7 @@
 				141E76732F1ECF5900EE2DD8 /* CodeView.swift in Sources */,
 				141E765C2F1599BC00EE2DD8 /* ThemeHost.swift in Sources */,
 				141E76642F1EA6CE00EE2DD8 /* CalendarDay.swift in Sources */,
+				145D965B2F4E301700C4410C /* HomeCoordinator.swift in Sources */,
 				145D96372F3E682300C4410C /* CoreDataProtocol.swift in Sources */,
 				141E764F2F15878200EE2DD8 /* UIColorExtesion.swift in Sources */,
 				145D96312F3BD52B00C4410C /* CoreDataManager.swift in Sources */,
@@ -446,6 +469,7 @@
 				141E765A2F15999100EE2DD8 /* NetworkService.swift in Sources */,
 				141E766C2F1EA75B00EE2DD8 /* HomeViewModel.swift in Sources */,
 				141E76E52F313FAF00EE2DD8 /* HomeCalendarHeader.swift in Sources */,
+				145D96582F4E2F9400C4410C /* CoordinatorProtocol.swift in Sources */,
 				141E76892F2A83C700EE2DD8 /* HomeBuilderProtocol.swift in Sources */,
 				141E76552F15992300EE2DD8 /* RemoteThemeEndpoint.swift in Sources */,
 				141E76D02F2A9AA200EE2DD8 /* Task.swift in Sources */,

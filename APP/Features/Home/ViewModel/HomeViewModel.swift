@@ -32,6 +32,7 @@ final class HomeViewModel: HomeViewModelProtocol {
     var onUpdateCalendar: (() -> Void)?
     var onUpdateHeader: (() -> Void)?
     var onError: ((String) -> Void)?
+    var onNavegationTask: (() -> Void)?
     
     //MARK: - Inicializador
     init(calendarService: CalendarServiceProtocol, coreData: CoreDataProtocol) {
@@ -77,6 +78,10 @@ extension HomeViewModel {
     func getPreviousYear() {
         guard let newDate = Calendar.current.date(byAdding: .year, value: -1, to: selectedDate) else { return }
         updateData(for: newDate)
+    }
+    //MARK: - navegacao
+    func didTapCreateTask() {
+        onNavegationTask?()
     }
 }
 
