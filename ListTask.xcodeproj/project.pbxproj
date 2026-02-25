@@ -52,6 +52,11 @@
 		145D96372F3E682300C4410C /* CoreDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96362F3E681F00C4410C /* CoreDataProtocol.swift */; };
 		145D96582F4E2F9400C4410C /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96572F4E2F8A00C4410C /* CoordinatorProtocol.swift */; };
 		145D965B2F4E301700C4410C /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D965A2F4E301200C4410C /* HomeCoordinator.swift */; };
+		145D96612F4F7B2300C4410C /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96602F4F7B1800C4410C /* TaskViewController.swift */; };
+		145D96632F4F7B8700C4410C /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96622F4F7B7F00C4410C /* TaskViewModel.swift */; };
+		145D96652F4F7BB800C4410C /* TaskViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96642F4F7BB300C4410C /* TaskViewModelProtocol.swift */; };
+		145D96672F4F840200C4410C /* TaskBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96662F4F83FD00C4410C /* TaskBuilder.swift */; };
+		145D96692F4F8A7500C4410C /* TaskViewModelEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96682F4F8A6F00C4410C /* TaskViewModelEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +106,11 @@
 		145D96362F3E681F00C4410C /* CoreDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProtocol.swift; sourceTree = "<group>"; };
 		145D96572F4E2F8A00C4410C /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		145D965A2F4E301200C4410C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		145D96602F4F7B1800C4410C /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		145D96622F4F7B7F00C4410C /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		145D96642F4F7BB300C4410C /* TaskViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModelProtocol.swift; sourceTree = "<group>"; };
+		145D96662F4F83FD00C4410C /* TaskBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilder.swift; sourceTree = "<group>"; };
+		145D96682F4F8A6F00C4410C /* TaskViewModelEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModelEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -235,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				141E76622F1EA6AB00EE2DD8 /* Home */,
+				145D965C2F4F772700C4410C /* CreateTask */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -364,6 +375,42 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		145D965C2F4F772700C4410C /* CreateTask */ = {
+			isa = PBXGroup;
+			children = (
+				145D965E2F4F7AE900C4410C /* Model */,
+				145D965D2F4F7AE000C4410C /* View */,
+				145D965F2F4F7AEE00C4410C /* Builder */,
+			);
+			path = CreateTask;
+			sourceTree = "<group>";
+		};
+		145D965D2F4F7AE000C4410C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				145D96602F4F7B1800C4410C /* TaskViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		145D965E2F4F7AE900C4410C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				145D96682F4F8A6F00C4410C /* TaskViewModelEnum.swift */,
+				145D96642F4F7BB300C4410C /* TaskViewModelProtocol.swift */,
+				145D96622F4F7B7F00C4410C /* TaskViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		145D965F2F4F7AEE00C4410C /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				145D96662F4F83FD00C4410C /* TaskBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -464,17 +511,21 @@
 				145D965B2F4E301700C4410C /* HomeCoordinator.swift in Sources */,
 				145D96372F3E682300C4410C /* CoreDataProtocol.swift in Sources */,
 				141E764F2F15878200EE2DD8 /* UIColorExtesion.swift in Sources */,
+				145D96652F4F7BB800C4410C /* TaskViewModelProtocol.swift in Sources */,
 				145D96312F3BD52B00C4410C /* CoreDataManager.swift in Sources */,
 				141E766E2F1EA76F00EE2DD8 /* HomeViewModelProtocol.swift in Sources */,
 				141E765A2F15999100EE2DD8 /* NetworkService.swift in Sources */,
 				141E766C2F1EA75B00EE2DD8 /* HomeViewModel.swift in Sources */,
 				141E76E52F313FAF00EE2DD8 /* HomeCalendarHeader.swift in Sources */,
 				145D96582F4E2F9400C4410C /* CoordinatorProtocol.swift in Sources */,
+				145D96672F4F840200C4410C /* TaskBuilder.swift in Sources */,
 				141E76892F2A83C700EE2DD8 /* HomeBuilderProtocol.swift in Sources */,
+				145D96612F4F7B2300C4410C /* TaskViewController.swift in Sources */,
 				141E76552F15992300EE2DD8 /* RemoteThemeEndpoint.swift in Sources */,
 				141E76D02F2A9AA200EE2DD8 /* Task.swift in Sources */,
 				141E76792F20176400EE2DD8 /* CalendarProtocol.swift in Sources */,
 				141E767B2F2804B900EE2DD8 /* HomeViewModelEnum.swift in Sources */,
+				145D96632F4F7B8700C4410C /* TaskViewModel.swift in Sources */,
 				141E76772F20174000EE2DD8 /* CalendarService.swift in Sources */,
 				141E76E12F2D4B3200EE2DD8 /* HomeDaysGrid.swift in Sources */,
 				141E76702F1EA77A00EE2DD8 /* HomeBuilder.swift in Sources */,
@@ -482,6 +533,7 @@
 				141E764A2F1585A200EE2DD8 /* Style.swift in Sources */,
 				145D96342F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift in Sources */,
 				145D96352F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift in Sources */,
+				145D96692F4F8A7500C4410C /* TaskViewModelEnum.swift in Sources */,
 				141E761E2F157AE900EE2DD8 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

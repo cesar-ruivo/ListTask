@@ -1,8 +1,7 @@
 import Foundation
 import UIKit
 
-final class HomeBuilder:HomeBuilderProtocol {
-    
+final class HomeBuilder: HomeBuilderProtocol {
     func build(coordinator: HomeCoordinator) -> UIViewController {
         let calendarService: CalendarService = CalendarService()
         let coreDateService: CoreDataManager = CoreDataManager()

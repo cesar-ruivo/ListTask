@@ -8,11 +8,12 @@ final class HomeCoordinator: Coordinator {
     }
     
     func start() {
-        let homeViewController = HomeBuilder().build(coordinator: self)
+        let homeViewController: UIViewController = HomeBuilder().build(coordinator: self)
         navigationController.setViewControllers([homeViewController], animated: false)
     }
     
     func routerToCreateTask() {
-        
+        let taskViewController: UIViewController = TaskBuilder().build(with: nil)
+        navigationController.present(taskViewController, animated: true)
     }
 }
