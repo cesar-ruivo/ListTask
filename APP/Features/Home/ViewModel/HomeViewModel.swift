@@ -117,8 +117,8 @@ private extension HomeViewModel {
     }
     //MARK: - CoreData
     func fetchAndConvertTasks() {
-        let sortRules = [NSSortDescriptor(key: "startDate", ascending: true)]
-        let entities = coreData.fetchTasks(TaskEntity.self, sortBy: sortRules)
+        let sortRules: [NSSortDescriptor] = [NSSortDescriptor(key: "startDate", ascending: true)]
+        let entities: [TaskEntity] = coreData.fetchTasks(TaskEntity.self, sortBy: sortRules, predicate: nil)
         
         self.allTasks = entities.map { entity in
     

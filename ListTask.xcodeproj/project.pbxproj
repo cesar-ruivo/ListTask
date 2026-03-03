@@ -176,6 +176,7 @@
 		141E761F2F157B1A00EE2DD8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				146216C62F560E4A00E071CF /* Model */,
 				145D96562F4E2F7F00C4410C /* Coordinator */,
 				141E76722F1ECF5400EE2DD8 /* CodeView.swift */,
 				145D962F2F3BD51100C4410C /* CoreData */,
@@ -254,7 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				141E76632F1EA6C800EE2DD8 /* CalendarDay.swift */,
-				141E76CF2F2A9A9F00EE2DD8 /* Task.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,7 +378,7 @@
 		145D965C2F4F772700C4410C /* CreateTask */ = {
 			isa = PBXGroup;
 			children = (
-				145D965E2F4F7AE900C4410C /* Model */,
+				145D965E2F4F7AE900C4410C /* ViewModel */,
 				145D965D2F4F7AE000C4410C /* View */,
 				145D965F2F4F7AEE00C4410C /* Builder */,
 			);
@@ -393,14 +393,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		145D965E2F4F7AE900C4410C /* Model */ = {
+		145D965E2F4F7AE900C4410C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				145D96682F4F8A6F00C4410C /* TaskViewModelEnum.swift */,
 				145D96642F4F7BB300C4410C /* TaskViewModelProtocol.swift */,
 				145D96622F4F7B7F00C4410C /* TaskViewModel.swift */,
 			);
-			path = Model;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		145D965F2F4F7AEE00C4410C /* Builder */ = {
@@ -409,6 +409,14 @@
 				145D96662F4F83FD00C4410C /* TaskBuilder.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		146216C62F560E4A00E071CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				141E76CF2F2A9A9F00EE2DD8 /* Task.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

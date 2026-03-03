@@ -33,10 +33,15 @@ extension CoreDataManager: CoreDataProtocol {
         saveContext()
     }
     
-    func fetchTasks<T: NSManagedObject>(_ type: T.Type, sortBy: [NSSortDescriptor]? = nil) -> [T] {
+    func fetchTasks<T: NSManagedObject>(_ type: T.Type, sortBy: [NSSortDescriptor]? = nil, predicate: NSPredicate? = nil) -> [T] {
         let entityName: String = String(describing: type)
         
         let fetchRequest: NSFetchRequest<T> = NSFetchRequest<T>(entityName: entityName)
+        
+        if let safePredicate = predicate {
+            fetchRequest.predicate = safePredicate
+        }
+        
         if let descriptors: [NSSortDescriptor] = sortBy, !descriptors.isEmpty {
             fetchRequest.sortDescriptors = sortBy
         }

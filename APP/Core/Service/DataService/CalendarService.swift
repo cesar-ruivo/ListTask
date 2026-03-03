@@ -79,4 +79,9 @@ final class CalendarService: CalendarServiceProtocol {
     func resetCalendar(by date: Date) -> Date {
         return calendar.startOfDay(for: date)
     }
+    
+    func getEndOfDay(for date: Date) -> Date {
+        let startOfDay = resetCalendar(by: date)
+        return calendar.date(byAdding: .day, value: 1, to: startOfDay) ?? date
+    }
 }
