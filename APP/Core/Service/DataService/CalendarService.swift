@@ -69,7 +69,7 @@ final class CalendarService: CalendarServiceProtocol {
     
     func getRelativeMonthName(for date: Date, offset: Int) -> String {
         guard let relativeDate = calendar.date(byAdding: .month, value: offset, to: date) else { return "" }
-        return monthFormatter.string(from: relativeDate).capitalized
+        return monthFormatter.string(from: relativeDate)
     }
     
     func getYear(for date: Date) -> String {
