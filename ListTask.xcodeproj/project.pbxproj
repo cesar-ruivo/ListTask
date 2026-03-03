@@ -44,6 +44,12 @@
 		141E767B2F2804B900EE2DD8 /* HomeViewModelEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E767A2F2804B500EE2DD8 /* HomeViewModelEnum.swift */; };
 		141E76892F2A83C700EE2DD8 /* HomeBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76882F2A83BE00EE2DD8 /* HomeBuilderProtocol.swift */; };
 		141E76D02F2A9AA200EE2DD8 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76CF2F2A9A9F00EE2DD8 /* Task.swift */; };
+		141E76E12F2D4B3200EE2DD8 /* HomeDaysGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76E02F2D4B2400EE2DD8 /* HomeDaysGrid.swift */; };
+		141E76E52F313FAF00EE2DD8 /* HomeCalendarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76E42F313FA800EE2DD8 /* HomeCalendarHeader.swift */; };
+		145D96312F3BD52B00C4410C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96302F3BD52100C4410C /* CoreDataManager.swift */; };
+		145D96342F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96332F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift */; };
+		145D96352F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96322F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift */; };
+		145D96372F3E682300C4410C /* CoreDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96362F3E681F00C4410C /* CoreDataProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +91,12 @@
 		141E767A2F2804B500EE2DD8 /* HomeViewModelEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelEnum.swift; sourceTree = "<group>"; };
 		141E76882F2A83BE00EE2DD8 /* HomeBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilderProtocol.swift; sourceTree = "<group>"; };
 		141E76CF2F2A9A9F00EE2DD8 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		141E76E02F2D4B2400EE2DD8 /* HomeDaysGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDaysGrid.swift; sourceTree = "<group>"; };
+		141E76E42F313FA800EE2DD8 /* HomeCalendarHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCalendarHeader.swift; sourceTree = "<group>"; };
+		145D96302F3BD52100C4410C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		145D96322F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		145D96332F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		145D96362F3E681F00C4410C /* CoreDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -122,6 +134,8 @@
 		141E75F62F10426300EE2DD8 = {
 			isa = PBXGroup;
 			children = (
+				145D96322F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift */,
+				145D96332F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift */,
 				141E76012F10426300EE2DD8 /* ListTask */,
 				141E761B2F157AD300EE2DD8 /* APP */,
 				141E76002F10426300EE2DD8 /* Products */,
@@ -149,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				141E76722F1ECF5400EE2DD8 /* CodeView.swift */,
+				145D962F2F3BD51100C4410C /* CoreData */,
 				141E764D2F15876200EE2DD8 /* Extension */,
 				141E76562F15994000EE2DD8 /* Service */,
 				141E76202F157B2900EE2DD8 /* Theme */,
@@ -270,6 +285,7 @@
 		141E766A2F1EA74400EE2DD8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				141E76E22F313F8800EE2DD8 /* CalendarHeader */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -290,6 +306,40 @@
 				141E76592F15998700EE2DD8 /* NetworkService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		141E76DF2F2D4B1B00EE2DD8 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				141E76E02F2D4B2400EE2DD8 /* HomeDaysGrid.swift */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
+		141E76E22F313F8800EE2DD8 /* CalendarHeader */ = {
+			isa = PBXGroup;
+			children = (
+				141E76E32F313F9A00EE2DD8 /* Calendar */,
+				141E76DF2F2D4B1B00EE2DD8 /* Grid */,
+			);
+			path = CalendarHeader;
+			sourceTree = "<group>";
+		};
+		141E76E32F313F9A00EE2DD8 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				141E76E42F313FA800EE2DD8 /* HomeCalendarHeader.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		145D962F2F3BD51100C4410C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				145D96362F3E681F00C4410C /* CoreDataProtocol.swift */,
+				145D96302F3BD52100C4410C /* CoreDataManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,19 +439,25 @@
 				141E76732F1ECF5900EE2DD8 /* CodeView.swift in Sources */,
 				141E765C2F1599BC00EE2DD8 /* ThemeHost.swift in Sources */,
 				141E76642F1EA6CE00EE2DD8 /* CalendarDay.swift in Sources */,
+				145D96372F3E682300C4410C /* CoreDataProtocol.swift in Sources */,
 				141E764F2F15878200EE2DD8 /* UIColorExtesion.swift in Sources */,
+				145D96312F3BD52B00C4410C /* CoreDataManager.swift in Sources */,
 				141E766E2F1EA76F00EE2DD8 /* HomeViewModelProtocol.swift in Sources */,
 				141E765A2F15999100EE2DD8 /* NetworkService.swift in Sources */,
 				141E766C2F1EA75B00EE2DD8 /* HomeViewModel.swift in Sources */,
+				141E76E52F313FAF00EE2DD8 /* HomeCalendarHeader.swift in Sources */,
 				141E76892F2A83C700EE2DD8 /* HomeBuilderProtocol.swift in Sources */,
 				141E76552F15992300EE2DD8 /* RemoteThemeEndpoint.swift in Sources */,
 				141E76D02F2A9AA200EE2DD8 /* Task.swift in Sources */,
 				141E76792F20176400EE2DD8 /* CalendarProtocol.swift in Sources */,
 				141E767B2F2804B900EE2DD8 /* HomeViewModelEnum.swift in Sources */,
 				141E76772F20174000EE2DD8 /* CalendarService.swift in Sources */,
+				141E76E12F2D4B3200EE2DD8 /* HomeDaysGrid.swift in Sources */,
 				141E76702F1EA77A00EE2DD8 /* HomeBuilder.swift in Sources */,
 				141E764C2F1586C900EE2DD8 /* ThemeManager.swift in Sources */,
 				141E764A2F1585A200EE2DD8 /* Style.swift in Sources */,
+				145D96342F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift in Sources */,
+				145D96352F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift in Sources */,
 				141E761E2F157AE900EE2DD8 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
