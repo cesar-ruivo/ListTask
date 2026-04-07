@@ -52,6 +52,10 @@
             "colorName": "blue",
             "hexadecimal": "#2F1883"
         },
+        {
+            "colorName": "white",
+            "hexadecimal": "#FFFFFF"
+        },
     ],
     "texts": [
         {

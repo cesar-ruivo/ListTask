@@ -1,5 +1,5 @@
 import UIKit
 
 protocol HomeBuilderProtocol {
-    func build() -> UIViewController
+    func build(coordinator: HomeCoordinator) -> UIViewController
 }

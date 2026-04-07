@@ -44,6 +44,19 @@
 		141E767B2F2804B900EE2DD8 /* HomeViewModelEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E767A2F2804B500EE2DD8 /* HomeViewModelEnum.swift */; };
 		141E76892F2A83C700EE2DD8 /* HomeBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76882F2A83BE00EE2DD8 /* HomeBuilderProtocol.swift */; };
 		141E76D02F2A9AA200EE2DD8 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76CF2F2A9A9F00EE2DD8 /* Task.swift */; };
+		141E76E12F2D4B3200EE2DD8 /* HomeDaysGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76E02F2D4B2400EE2DD8 /* HomeDaysGrid.swift */; };
+		141E76E52F313FAF00EE2DD8 /* HomeCalendarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E76E42F313FA800EE2DD8 /* HomeCalendarHeader.swift */; };
+		145D96312F3BD52B00C4410C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96302F3BD52100C4410C /* CoreDataManager.swift */; };
+		145D96342F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96332F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift */; };
+		145D96352F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96322F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift */; };
+		145D96372F3E682300C4410C /* CoreDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96362F3E681F00C4410C /* CoreDataProtocol.swift */; };
+		145D96582F4E2F9400C4410C /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96572F4E2F8A00C4410C /* CoordinatorProtocol.swift */; };
+		145D965B2F4E301700C4410C /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D965A2F4E301200C4410C /* HomeCoordinator.swift */; };
+		145D96612F4F7B2300C4410C /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96602F4F7B1800C4410C /* TaskViewController.swift */; };
+		145D96632F4F7B8700C4410C /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96622F4F7B7F00C4410C /* TaskViewModel.swift */; };
+		145D96652F4F7BB800C4410C /* TaskViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96642F4F7BB300C4410C /* TaskViewModelProtocol.swift */; };
+		145D96672F4F840200C4410C /* TaskBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96662F4F83FD00C4410C /* TaskBuilder.swift */; };
+		145D96692F4F8A7500C4410C /* TaskViewModelEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D96682F4F8A6F00C4410C /* TaskViewModelEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +98,19 @@
 		141E767A2F2804B500EE2DD8 /* HomeViewModelEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelEnum.swift; sourceTree = "<group>"; };
 		141E76882F2A83BE00EE2DD8 /* HomeBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilderProtocol.swift; sourceTree = "<group>"; };
 		141E76CF2F2A9A9F00EE2DD8 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		141E76E02F2D4B2400EE2DD8 /* HomeDaysGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDaysGrid.swift; sourceTree = "<group>"; };
+		141E76E42F313FA800EE2DD8 /* HomeCalendarHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCalendarHeader.swift; sourceTree = "<group>"; };
+		145D96302F3BD52100C4410C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		145D96322F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		145D96332F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		145D96362F3E681F00C4410C /* CoreDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProtocol.swift; sourceTree = "<group>"; };
+		145D96572F4E2F8A00C4410C /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		145D965A2F4E301200C4410C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		145D96602F4F7B1800C4410C /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		145D96622F4F7B7F00C4410C /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		145D96642F4F7BB300C4410C /* TaskViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModelProtocol.swift; sourceTree = "<group>"; };
+		145D96662F4F83FD00C4410C /* TaskBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilder.swift; sourceTree = "<group>"; };
+		145D96682F4F8A6F00C4410C /* TaskViewModelEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModelEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -122,6 +148,8 @@
 		141E75F62F10426300EE2DD8 = {
 			isa = PBXGroup;
 			children = (
+				145D96322F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift */,
+				145D96332F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift */,
 				141E76012F10426300EE2DD8 /* ListTask */,
 				141E761B2F157AD300EE2DD8 /* APP */,
 				141E76002F10426300EE2DD8 /* Products */,
@@ -148,7 +176,10 @@
 		141E761F2F157B1A00EE2DD8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				146216C62F560E4A00E071CF /* Model */,
+				145D96562F4E2F7F00C4410C /* Coordinator */,
 				141E76722F1ECF5400EE2DD8 /* CodeView.swift */,
+				145D962F2F3BD51100C4410C /* CoreData */,
 				141E764D2F15876200EE2DD8 /* Extension */,
 				141E76562F15994000EE2DD8 /* Service */,
 				141E76202F157B2900EE2DD8 /* Theme */,
@@ -215,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				141E76622F1EA6AB00EE2DD8 /* Home */,
+				145D965C2F4F772700C4410C /* CreateTask */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -223,7 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				141E76632F1EA6C800EE2DD8 /* CalendarDay.swift */,
-				141E76CF2F2A9A9F00EE2DD8 /* Task.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,6 +262,7 @@
 		141E76622F1EA6AB00EE2DD8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				145D96592F4E300600C4410C /* Coordinator */,
 				141E76612F1EA68800EE2DD8 /* Model */,
 				141E76652F1EA6D300EE2DD8 /* ViewModel */,
 				141E76662F1EA6F300EE2DD8 /* View */,
@@ -270,6 +302,7 @@
 		141E766A2F1EA74400EE2DD8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				141E76E22F313F8800EE2DD8 /* CalendarHeader */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -290,6 +323,100 @@
 				141E76592F15998700EE2DD8 /* NetworkService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		141E76DF2F2D4B1B00EE2DD8 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				141E76E02F2D4B2400EE2DD8 /* HomeDaysGrid.swift */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
+		141E76E22F313F8800EE2DD8 /* CalendarHeader */ = {
+			isa = PBXGroup;
+			children = (
+				141E76E32F313F9A00EE2DD8 /* Calendar */,
+				141E76DF2F2D4B1B00EE2DD8 /* Grid */,
+			);
+			path = CalendarHeader;
+			sourceTree = "<group>";
+		};
+		141E76E32F313F9A00EE2DD8 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				141E76E42F313FA800EE2DD8 /* HomeCalendarHeader.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		145D962F2F3BD51100C4410C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				145D96362F3E681F00C4410C /* CoreDataProtocol.swift */,
+				145D96302F3BD52100C4410C /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		145D96562F4E2F7F00C4410C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				145D96572F4E2F8A00C4410C /* CoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		145D96592F4E300600C4410C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				145D965A2F4E301200C4410C /* HomeCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		145D965C2F4F772700C4410C /* CreateTask */ = {
+			isa = PBXGroup;
+			children = (
+				145D965E2F4F7AE900C4410C /* ViewModel */,
+				145D965D2F4F7AE000C4410C /* View */,
+				145D965F2F4F7AEE00C4410C /* Builder */,
+			);
+			path = CreateTask;
+			sourceTree = "<group>";
+		};
+		145D965D2F4F7AE000C4410C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				145D96602F4F7B1800C4410C /* TaskViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		145D965E2F4F7AE900C4410C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				145D96682F4F8A6F00C4410C /* TaskViewModelEnum.swift */,
+				145D96642F4F7BB300C4410C /* TaskViewModelProtocol.swift */,
+				145D96622F4F7B7F00C4410C /* TaskViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		145D965F2F4F7AEE00C4410C /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				145D96662F4F83FD00C4410C /* TaskBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		146216C62F560E4A00E071CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				141E76CF2F2A9A9F00EE2DD8 /* Task.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,19 +516,32 @@
 				141E76732F1ECF5900EE2DD8 /* CodeView.swift in Sources */,
 				141E765C2F1599BC00EE2DD8 /* ThemeHost.swift in Sources */,
 				141E76642F1EA6CE00EE2DD8 /* CalendarDay.swift in Sources */,
+				145D965B2F4E301700C4410C /* HomeCoordinator.swift in Sources */,
+				145D96372F3E682300C4410C /* CoreDataProtocol.swift in Sources */,
 				141E764F2F15878200EE2DD8 /* UIColorExtesion.swift in Sources */,
+				145D96652F4F7BB800C4410C /* TaskViewModelProtocol.swift in Sources */,
+				145D96312F3BD52B00C4410C /* CoreDataManager.swift in Sources */,
 				141E766E2F1EA76F00EE2DD8 /* HomeViewModelProtocol.swift in Sources */,
 				141E765A2F15999100EE2DD8 /* NetworkService.swift in Sources */,
 				141E766C2F1EA75B00EE2DD8 /* HomeViewModel.swift in Sources */,
+				141E76E52F313FAF00EE2DD8 /* HomeCalendarHeader.swift in Sources */,
+				145D96582F4E2F9400C4410C /* CoordinatorProtocol.swift in Sources */,
+				145D96672F4F840200C4410C /* TaskBuilder.swift in Sources */,
 				141E76892F2A83C700EE2DD8 /* HomeBuilderProtocol.swift in Sources */,
+				145D96612F4F7B2300C4410C /* TaskViewController.swift in Sources */,
 				141E76552F15992300EE2DD8 /* RemoteThemeEndpoint.swift in Sources */,
 				141E76D02F2A9AA200EE2DD8 /* Task.swift in Sources */,
 				141E76792F20176400EE2DD8 /* CalendarProtocol.swift in Sources */,
 				141E767B2F2804B900EE2DD8 /* HomeViewModelEnum.swift in Sources */,
+				145D96632F4F7B8700C4410C /* TaskViewModel.swift in Sources */,
 				141E76772F20174000EE2DD8 /* CalendarService.swift in Sources */,
+				141E76E12F2D4B3200EE2DD8 /* HomeDaysGrid.swift in Sources */,
 				141E76702F1EA77A00EE2DD8 /* HomeBuilder.swift in Sources */,
 				141E764C2F1586C900EE2DD8 /* ThemeManager.swift in Sources */,
 				141E764A2F1585A200EE2DD8 /* Style.swift in Sources */,
+				145D96342F3CF8AF00C4410C /* TaskEntity+CoreDataProperties.swift in Sources */,
+				145D96352F3CF8AF00C4410C /* TaskEntity+CoreDataClass.swift in Sources */,
+				145D96692F4F8A7500C4410C /* TaskViewModelEnum.swift in Sources */,
 				141E761E2F157AE900EE2DD8 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
